@@ -1,0 +1,25 @@
+<!--
+* View de cadastro de cidades
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+--><div layout-padding>
+  <md-content md-whiteframe="2">
+      <div class="md-list-item-text" layout="row" layout-xs="column" layout-padding flex>
+        <div flex="25" class="text-center">{{ 'city.table.id'  | translate }}</div>
+        <div flex="25" class="text-center">{{ 'city.table.state' | translate }}</div>
+        <div flex class="text-center">{{ 'city.table.city' | translate }}</div>
+      </div>
+    <md-list>
+      <md-list-item ng-repeat="item in data">
+        <div class="md-list-item-text" layout="row" layout-xs="column" layout-padding flex="100">
+          <div flex="25" class="text-center">{{ item.id }}</div>
+          <div flex="25" class="text-center">{{ item.state }}</div>
+          <div flex class="text-center">{{ item.name }}</div>
+        </div>
+      <md-divider ng-show="!$last"></md-divider>  
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

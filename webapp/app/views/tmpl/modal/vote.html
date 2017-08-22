@@ -1,0 +1,33 @@
+<!--
+* View de listar os votos por urna
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+  <md-content>
+    <div flex="100" layout-padding layout-align="center center">
+        <center><h2>{{ 'box.table.box' | translate }}: {{data.box.id}}</h2></center>
+      </div>
+    <div class="md-list-item-text" layout="row" layout-xs="column" layout-padding flex>
+      <div flex class="text-center">{{ 'plaque.table.number' | translate }}</div>
+      <div flex class="text-center">{{ 'plaque.table.plaque' | translate }}</div>
+      <div flex class="text-center">{{ 'plaque.table.votes'  | translate }}</div>
+    </div>
+    <md-list>
+      <md-list-item ng-repeat="item in data.box.vote">
+          <div class="md-list-item-text" layout="row" layout-xs="column" layout-padding flex="100">
+          <div flex class="text-center">{{ item.id }}</div>
+          <div flex class="text-center">{{ item.name }}</div>
+          <div flex class="text-center">{{ item.quantity }}</div>
+        </div>
+      <md-divider ng-show="!$last"></md-divider>  
+      </md-list-item>
+    </md-list>
+    <md-button class="md-fab md-accent md-raised md-hue-1 btn-new-item" ng-click="print()">
+      <md-icon class="fa fa-print"></md-icon>
+       <md-tooltip md-direction="left">
+            {{'other.new' | translate}}
+          </md-tooltip>
+    </md-button>
+  </md-content>

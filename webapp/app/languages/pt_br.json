@@ -1,0 +1,410 @@
+{
+    "login" : {
+        "title" : "Seja Bem Vindo!",
+        "subtitle" : "Se você já possui cadastro no sistema basta preencher seu email e senha",
+        "login-button" : "Entrar",
+        "recovery_button" : "Esqueceu a senha?",
+        "success": "Login realizado com sucesso",
+        "fail" : "Ocorreu um erro ao realizar o login. Favor verifique o email e a senha",
+        "not_you":"Não é você?",
+        "placeholder" : {
+            "email" : "Email",
+            "password" : "Senha"
+        },
+        "session": "Sua sessão expirou" 
+    },
+    "page" : {
+        "dashboard": {
+            "title":"Painel de controle",
+            "subtitle":"Home / painel de controle"
+        },
+        "politician": {
+            "title":"Candidatos",
+            "subtitle":"Home / Candidatos"
+        },
+        "city": {
+            "title":"Municipíos",
+            "subtitle":"Home / Municipíos"
+        },
+        "user": {
+            "title":"Usuários",
+            "subtitle":"Home / Usuários"
+        },
+        "box": {
+            "title":"Urnas",
+            "subtitle":"Home / Urnas"
+        },
+        "config": {
+            "title":"Configurações",
+            "subtitle":"Home / Configurações"
+        },
+        "plaque": {
+            "title":"Chapa",
+            "subtitle":"Home / Chapa"
+        },
+        "core": {
+            "title":"Núcleo Eleitoral",
+            "subtitle":"Home / Núcleo Eleitoral"
+        },
+        "voter": {
+            "title":"Eleitores",
+            "subtitle":"Home / Eleitores"
+        }
+    },
+    "validation" : {
+        "name" : "Por favor preencha o seu nome completo",
+        "email" : "Por favor preencha o campo email",
+        "password" : "Por favor preencha o campo senha",
+        "confirm_password" : "Por favor preencha o campo confirmar senha",
+        "full_name" : "Por favor preencha o seu nome completo",
+        "password_match": "A sua senha não está de acordo com a confirmação da mesma",
+        "first_name" : "Por favor, preencha o seu nome",
+        "last_name" : "Por favor, preencha o seu sobrenome",
+        "old_password" : "Por favor, preencha a sua senha atual",
+        "terms" : "Para se cadastrar é necessário aceitar os termos"
+    },
+    "connection": {
+        "fail" : "Erro de conexão. Verifique se seu computador está conectado na rede"
+    },
+    "recovery": {
+        "title" : "Recuperar senha",
+        "email" : "Digite seu email",
+        "request_button" : "Recuperar senha",
+        "password_button": "Alterar senha",
+        "code" : "Código",
+        "generic_error": "Ocorreu um problema, reinicie o processo",
+        "title_hello" : "Olá,",
+        "subtitle_extra": "Por favor, complete os campos para alterar sua senha",
+        "success" : "Senha alterada com sucesso",
+        "send_success" : "Um email de verificação foi enviado para você. Por favor siga os passos indicados nele",
+        "authenticate_fail": "Ocorreu um problema durante a autenticação da sua alteração de senha, por favor refaça o processo"
+    },
+    "menu" : {
+        "info" : "INFORMAÇÕES",
+        "dashboard" : "Painel de controle",
+        "list_user" : "Usuários",
+        "add_user" : "Adicionar Usuários",
+        "list_box" : "Urnas",
+        "add_box" : "Adicionar Urnas",
+        "box" : "Urnas & Regiões eleitorais",
+        "user" : "Usuários",
+        "report" : "Relatórios",
+        "config" : "Configurações",
+        "add_plaque" : "Adicionar Chapa",
+        "list_plaque" : "Chapa",
+        "eleitoral_plaque" : "Candidatos & Chapas",
+        "list_core" : "Núcleo Eleitoral",
+        "add_core" : "Adicionar Núcleo Eleitoral",
+        "add_politician" : "Adicionar Candidatos",
+        "list_politician" : "Candidatos",
+        "list_core" : "Núcleo Eleitoral",
+        "add_core" : "Adicionar Núcleo Eleitoral",
+        "list_core" : "Núcleo Eleitoral",
+        "add_core" : "Adicionar Núcleo Eleitoral",
+        "send" : "Descarga",
+        "add_send" : "Enviar Descarga",
+        "city" : "Municipíos",
+        "voter" : "Eleitores",
+        "report" : "Relatórios"
+    },
+    "user": {
+        "table": {
+            "id" : "#",
+            "first_name" : "Nome",
+            "last_name": "Sobrenome",
+            "age" : "Idade",
+            "email": "Email",
+            "status": "Situação",
+            "action": "Ações",
+            "type": "Tipo de usuário"
+        },
+        "placeholder": {
+            "email" : "Email",
+            "first_name" : "Nome",
+            "last_name" : "Sobrenome",
+            "headline": "Cadastrar novo usuário",
+            "subheadline": "Preencha os campos",
+            "password" : "Senha",
+            "document": "RG",
+            "role":"Tipo"
+        }
+    },
+    "box": {
+        "table": {
+            "local" : "Localidade",
+            "core": "Núcleo",
+            "number": "#",
+            "city": "Cidade",
+            "action" : "Ação",
+            "box" : "Urna",
+            "key" : "Revogar chave"
+        },
+        "placeholder": {
+            "headline" : "Cadastrar urna",
+            "subheadline":  "preencha os campos",
+            "locale" : "Localidade",
+            "city": {
+                "autocomplete" : "Digite o nome da cidade",
+                "notfound" : "Não encontramos nenhuma cidade"
+            },
+            "school" : {
+                "autocomplete":"Digite o nome da escola",
+                "notfound" : "nenhuma escola encontrada"
+            },
+            "core" : {
+                "autocomplete":"Digite o nome do Núcleo",
+                "notfound" : "nenhum núcleo encontrada"
+            }
+        }
+    },
+    "send": {
+        "placeholder": {
+            "title" : "Descarga dos VOTOS",
+            "password": "Senha de abertura da urna (Diretor)",
+            "password1": "Senha de abertura da urna (Mesário)",
+            "import" : {
+                "file": "Clique aqui para selecionar o arquivo",
+                "error" : {
+                    "notsuported" : "Tipo de arquivo errado, por favor selecione o arquivo da urna"
+                }
+            }
+        }
+    },
+    "plaque": {
+        "table": {
+            "plaque" : "Chapa",
+            "core" : "Núcleo",
+            "type": "Tipo",
+            "member": "Membros",
+            "status": "Situação",
+            "action" : "Ação",
+            "number" : "#",
+            "votes" : "Quantidade votos",
+            "button" : {
+                "member" : {
+                    "add" : "+",
+                    "delete": "-"
+                }
+            },
+            "empty" : "Sem candidatos"
+        },
+        "placeholder": {
+            "type_id" : "Tipo de chapa",
+            "name": "Nome da chapa",
+            "headline": "Cadastrar nova chapa",
+            "subheadline": "preencha os campos",
+            "number" : "Número da chapa"
+        }
+    },
+    "plaque_candidate": {
+        "placeholder": {
+            "headline" : "Adicionar um candidato",
+            "subheadline": "Digite o nome que você está procurando",
+            "autocomplete": "Digite aqui alguma letra (exemplo: João, Maria, Elias)",
+            "notfound": "Não existem candidatos disponíveis"
+        }
+    },
+    "city": {
+        "table": {
+            "city" : "Cidade",
+            "state": "Estado",
+            "id": "#",
+            "status": "Situação",
+            "action" : "Ação"
+        },
+        "import" : {
+            "success" : "Eleitor importado com sucesso",
+            "fail" :  "Eleitor não importado, confira o LOG"
+        }
+    },
+    "core": {
+        "table": {
+            "id" : "#",
+            "city": "Cidade",
+            "core": "Núcleo",
+            "status": "Situação",
+            "action" : "Ação"
+        },
+        "import" : {
+            "success" : "Núcleo importado com sucesso",
+            "fail" :  "Núcleo não importado, confira o LOG"
+        }
+    },
+    "core_zone": {
+        "import" : {
+            "success" : "Área do núcleo importado com sucesso",
+            "fail" :  "Área do núcleo não importado, confira o LOG"
+        }
+    },
+    "voter": {
+        "table": {
+            "id" : "#",
+            "city": "Cidade",
+            "core": "Núcleo",
+            "status": "Situação",
+            "action" : "Ação",
+            "name" : "Nome",
+            "traffic": "Transito",
+            "document": "Documento"
+        },
+        "import" : {
+            "success" : "Eleitor importado com sucesso",
+            "fail" :  "Eleitor não importado, confira o LOG"
+        }
+    },
+    "politician": {
+        "table": {
+            "id" : "#",
+            "first_name": "Nome",
+            "last_name": "Sobrenome",
+            "email": "Email",
+            "document": "RG",
+            "office" : "Cargo"
+        },
+        "placeholder": {
+            "email" : "Email",
+            "first_name" : "Nome",
+            "last_name" : "Sobrenome",
+            "headline": "Cadastrar novo Candidato",
+            "subheadline": "Preencha os campos",
+            "office" : "Cargo",
+            "document": "RG"
+        }
+    },
+     "config": {
+        "placeholder": {
+            "begin_date" : "Data de Início",
+            "finish_date" : "Data de Fim",
+            "save": "Salvar",
+            "election" : { 
+                "title" : "Configurações de eleição",
+                "lockdown" : "Desabilitar alterações no sistema" 
+                }
+        },
+        "import" : {
+            "title" : "Importações",
+            "core" : "Núcleo",
+            "core_zone": "Cidades x Núcleos",
+            "city" : "Cidades",
+            "voter" : "Eleitores",
+            "error": {
+                "notsuported" : "Formato de arquivo não suportado, por favor selecione o arquivo .csv",
+                "unknow" : "Algo inesperado aconteceu, confira o log",
+                "log" : "por favor, verifique o log de importãção"
+            }
+        },
+        "import_action" : {
+            "title" : "Você está importando dados sensíveis",
+            "subtitle" : "Deseja continuar?",
+            "button": {
+                "yes" : "Eu sei o que estou fazendo"
+            }
+        }
+    },
+    "other":{
+        "delete" : "Desativar",
+        "action" : "Ação",
+        "new" : "Novo",
+        "edit": "Editar",
+        "save" : "Salvar",
+        "cancel": "Cancelar",
+        "download" : "Download"
+    },
+    "model":{
+        "success": "Sucesso!",
+        "error": "Erro",
+        "delete": "Desativar",
+        "user": {
+            "create" : "Usuário cadastrado com sucesso",
+            "update" : "Usuário atualizado com sucesso",
+            "delete" : {
+                "ask" : "Você deseja realmente desativar?",
+                "confirm" : "Usuário desativado com sucesso"
+            },
+            "email": {
+                "notfound" : "E-mail é um campo obrigatório",
+                "uniqueness": "Esse email já está em uso"
+            },
+            "first_name" : {
+                "notfound" : "Nome é um campo obrigatório"
+            },
+            "last_name":{
+                "notfound" : "Sobrenome é um campo obrigatório"
+            },
+            "role":{
+                "notfound": "Tipo de usuário é um campo obrigatório"
+            },
+            "document" :{
+                "notfound" : "RG é um campo obrigatório"
+            }
+        },
+        "box": {
+            "create" : "Usuário cadastrado com sucesso",
+            "update" : "Usuário atualizado com sucesso",
+            "delete" : {
+                "ask" : "Você deseja realmente desativar?",
+                "confirm" : "Urna desativado com sucesso",
+                "key" : {
+                    "ask" : "deseja desativar a chave?",
+                    "confirm":"Chave desativada com sucesso"
+                }
+            },
+            "core_id": {
+                "notfound" : "Núcleo é um campo obrigatório"
+            },
+            "locale" : {
+                "notfound" : "Localidade é um campo obrigatório"
+            },
+            "city_id":{
+                "notfound" : "Cidade é um campo obrigatório"
+            },
+            "role":{
+                "notfound": "Tipo de usuário é um campo obrigatório"
+            },
+            "document" :{
+                "notfound" : "RG é um campo obrigatório"
+            }
+        },
+        "candidate": {
+            "create" : "Candidato cadastrado com sucesso",
+            "update" : "Candidato atualizado com sucesso",
+            "delete" : {
+                "ask" : "Você deseja realmente desativar?",
+                "confirm" : "Candidato desativado com sucesso"
+            },
+            "email": {
+                "notfound" : "E-mail é um campo obrigatório",
+                "uniqueness": "Esse email já está em uso"
+            },
+            "first_name" : {
+                "notfound" : "Nome é um campo obrigatório"
+            },
+            "last_name":{
+                "notfound" : "Sobrenome é um campo obrigatório"
+            },
+            "candidate_office_id":{
+                "notfound": "Cargo é um campo obrigatório"
+            },
+            "document" :{
+                "notfound" : "RG é um campo obrigatório"
+            }
+        },
+        "plaque" : {
+            "delete" : {
+                "ask" : "Você deseja realmente desativar?",
+                "confirm" : "Chapa desativada com sucesso"
+            },
+            "plaque_type_id": {
+                "notfound": "Tipo de chapa é necessário"
+            }
+
+        },
+        "plaque_candidate": {
+            "plaque_id" :{
+                "notfound" : "você precisa selecionar uma chapa"
+            },
+            "delete": "Candidato removido da chapa",
+            "notfound": "Essa chapa não tem candidatos"
+        }
+    }
+}

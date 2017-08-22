@@ -1,0 +1,26 @@
+input, input.form-control{
+	background : $inputBackground;
+	border-color: $inputBorder;
+	color: $inputText;
+	border-radius: 0;
+	&:focus{
+		border-color: $inputFocusBorder;
+	}
+}
+
+label { 
+	color: $inputLabel;
+	font-weight: 500;
+}
+md-input-container label{
+	color: $primary;
+}
+md-input-container.md-default-theme.md-input-focused:not(.md-input-invalid) .md-input, md-input-container.md-input-focused:not(.md-input-invalid) .md-input, md-input-container.md-default-theme.md-input-resized:not(.md-input-invalid) .md-input, md-input-container.md-input-resized:not(.md-input-invalid) .md-input{
+	border-color: $primary;
+}
+md-input-container.md-default-theme.md-input-has-value:not(.md-input-invalid) label, md-input-container.md-input-has-value:not(.md-input-invalid) label{
+	color: $primary;
+}
+md-input-container.md-default-theme:not(.md-input-focused):not(.md-input-invalid) label.md-required::after, md-input-container:not(.md-input-focused):not(.md-input-invalid) label.md-required::after{
+	color: $primary;
+}

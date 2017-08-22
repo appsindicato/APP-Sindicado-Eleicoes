@@ -1,0 +1,63 @@
+<!--
+* View de cadastro de um novo candidato
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+         <md-card>
+		    <md-card-title>
+		      <md-card-title-text>
+		        <span class="md-headline">{{ 'politician.placeholder.headline' | translate }}</span>
+		        <span class="md-subhead">{{ 'politician.placeholder.subheadline' | translate }}</span>
+		      </md-card-title-text>
+		    </md-card-title>
+
+		    <md-card-content>
+		      	<div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'politician.placeholder.first_name' | translate }}</label>
+			          <input ng-model="politician.first_name">
+			        </md-input-container>
+		        </div>
+		        <div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'politician.placeholder.last_name' | translate }}</label>
+			          <input ng-model="politician.last_name">
+			        </md-input-container>
+		        </div>
+		        <div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'politician.placeholder.document' | translate }}</label>
+			          <input ng-model="politician.document">
+			        </md-input-container>
+		        </div>
+		        <div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'politician.placeholder.email' | translate }}</label>
+			          <input ng-model="politician.email">
+			        </md-input-container>
+			    </div>
+			    <div layout="row">
+			    	<div flex="50">
+			    		{{ 'politician.placeholder.office' | translate }}
+			    	</div>
+			    	<div flex="50">
+				        <md-radio-group ng-model="politician.candidate_office_id">
+					      <md-radio-button ng-repeat="p in politician_office" ng-value="p.id">
+					      	{{p.name}}
+					      </md-radio-button>
+					    </md-radio-group>
+					</div>
+		      	</div>
+		      	<div layout="row">
+			    	<md-button flex="50" class="md-raised md-primary" ng-click="save()">
+			    		{{ 'other.save' | translate }}
+			    	</md-button>
+			    	<md-button flex="50" class="md-raised md-warn" ng-click="cancel()">
+			    		{{ 'other.cancel' | translate }}
+			    	</md-button>
+		      	</div>
+		    </md-card-content>
+
+		  </md-card>

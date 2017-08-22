@@ -1,0 +1,74 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.5.1",
+    "angular-animate": "1.4.6",
+    "angular-resource": "1.4.6",
+    "angular-cookies": "1.4.6",
+    "angular-sanitize": "1.2.16",
+    "angular-touch": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-bootstrap": "^1.3.3",
+    "angular-loading-bar": "~0.7.0",
+    "angular-ui-utils": "~0.2.3",
+    "angular-ui-router": "~0.2.13",
+    "angular-fontawesome": "~0.4.0",
+    "font-awesome": "4.7.0",
+    "bourbon": "~4.2.5",
+    "bootstrap": "~3.3.5",
+    "simple-line-icons": "~2.2.1",
+    "material-design-iconic-font": "~2.1.1",
+    "angular-input-masks": "^2.1.1",
+    "angular-i18n": "^1.5.7",
+    "oclazyload": "~1.0.5",
+    "weather-icons": "~2.0.10",
+    "ngMask": "angular-mask#^3.1.1",
+    "angular-material": "^1.0.9",
+    "angular-translate": "^2.11.1",
+    "angular-translate-storage-local": "^2.11.1",
+    "install": "^1.0.4",
+    "angular-translate-loader-static-files": "^2.11.1",
+    "animate.css": "^3.5.2",
+    "angular-moment": "^0.10.3",
+    "angular-morris": "angular-morris-chart#^1.3.0",
+    "ngSweetAlert2": "^2.0.0",
+    "angular-highlightjs": "^0.6.2",
+    "angular-slimscroll": "^1.1.5",
+    "angular-dynamic-locale": "^0.1.32",
+    "angular-socialshare": "angularjs-socialshare#^2.3.6",
+    "angular-material-icons": "^0.7.1",
+    "svg-morpheus": "^0.3.2",
+    "angular-toastr": "^2.1.1",
+    "ng-file-upload": "^12.2.13",
+    "angular-busy": "^4.1.4",
+    "angular-smart-table": "^2.1.8"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/js/bootstrap.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    },
+    "material-design-iconic-font": {
+      "main": [
+        "./dist/css/material-design-iconic-font.css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.16",
+    "angular-scenario": "1.2.16",
+    "angular-translate": "^2.11.1"
+  },
+  "resolutions": {
+    "bootstrap": "~3.1.1"
+  },
+  "appPath": "app"
+}

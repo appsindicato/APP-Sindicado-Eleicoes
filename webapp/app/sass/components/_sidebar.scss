@@ -1,0 +1,46 @@
+md-backdrop{
+  position:fixed;
+}
+md-sidenav,md-sidenav.md-sidenav-right{
+    box-shadow: 3px 0px 18px 0 $primaryShadow;
+	md-content{
+		box-shadow:none;
+	}
+	z-index:1000000;
+	h5,h6,p{
+		color: $secondaryFont;
+	}
+	position:fixed;
+	.sidebar-subheader{
+		color: $secondaryFont;
+		border-bottom: 1px solid $dividerColor;
+		padding: 10px;
+		width: 100%;
+	}
+	.result-list{
+		list-style: none;
+		padding:0;
+		li {
+			color:$secondaryFont;
+			&.list-divider{
+				border-bottom: 1px $dividerColor dashed;
+				margin: 10px 0;
+			}
+			.badge{
+				float: right;
+				position:relative;
+				display: block;
+			}
+
+		}
+	}
+}
+
+/**
+ * responsive menu 
+ */
+@media only screen and (max-width: 560px) {
+	md-sidenav,md-sidenav.md-sidenav-right{
+		top:60px;
+	}
+}

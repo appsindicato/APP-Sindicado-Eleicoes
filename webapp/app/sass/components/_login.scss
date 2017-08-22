@@ -1,0 +1,54 @@
+.login-div{
+	//max-height: 500px;
+	md-content{
+		padding:0;
+	}
+	.logo-login{
+		padding:20px;
+		background-color: #292929;
+	}
+	.login-content{
+		padding:30px;
+	}
+	.login-box{
+		color: $primary;
+		a{
+			&.recovery{
+				font-size:12px;
+			}
+			color: $primary;
+		}
+		h4{
+			text-align: center;
+			font-size: 24px;
+			color: $primary;
+			font-weight: bold;
+		}
+		p{
+			font-size:12px;
+			text-align:center;
+		}
+	    box-shadow: 0px 0px 3px 0px $primaryShadow;
+	    //border: 1px solid $primaryShadow;
+	    border-radius: 5px;
+	    md-content{
+	    	border-radius: 5px;
+	    }
+	}
+	md-progress-linear{
+		height: 3px;
+		opacity: 0.9;
+		.md-container{
+			background-color: $primary;
+			height: 3px;
+			top:-24px;
+			.md-bar{
+				background-color: lighten($primary,25%);
+				height: 3px;
+			}
+		}
+	}
+	md-tabs-wrapper{
+		display:none;
+	}
+}

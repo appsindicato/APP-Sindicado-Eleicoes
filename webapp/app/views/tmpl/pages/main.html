@@ -1,0 +1,203 @@
+<!--
+* View do layout principal, contem o menu e o wrapper para inclusao das paginas
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak ng-controller="MainCtrl">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <md-list md-list class="sidebar">
+      <md-list-item class="sidebar-main">
+        <a ng-click="toggleSidebar()">
+          <!-- <img src="images/padrao.png" style="width:100px;" /> -->
+          <ng-md-icon class="menu-icon" icon="{{iconSideBar}}" size="56" options='{"rotation": "random","duration":"1000"}'></ng-md-icon>
+        </a>
+      </md-list-item>
+      <md-list-item class="logo-closed">
+          <img src="images/padrao.png"/>
+      </md-list-item>
+      <!-- dashboard -->
+      <md-list-item class="sidebar-list">
+        <a ui-sref="app.home" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()" >
+          <span class="menu-icon fa fa-tachometer"></span>
+          {{'menu.dashboard' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.dashboard' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+      <!-- user -->
+      <md-list-item class="sidebar-title"><span>{{'menu.user' | translate}}</span></md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listUser" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-users"></span>
+          {{ 'menu.list_user' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.list_user' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+
+      <!-- plaque -->
+      <md-list-item class="sidebar-title"><span>{{'menu.eleitoral_plaque' | translate}}</span></md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listPlaque" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-object-ungroup"></span>
+          {{ 'menu.list_plaque' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.list_plaque' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+
+      <!-- politician -->
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listPolitician" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-id-card"></span>
+          {{ 'menu.list_politician' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.list_politician' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+
+      <!-- box -->
+      <md-list-item class="sidebar-title"><span>{{'menu.box' | translate}}</span></md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listBox" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-archive"></span>
+          {{ 'menu.list_box' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.list_box' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+    
+      <!-- zone -->
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listCore" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-map-marker"></span>
+          {{ 'menu.list_core' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.list_core' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+
+      <!-- report -->
+      <md-list-item class="sidebar-title"><span>{{ 'menu.report' | translate}}</span></md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.report" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-file-text"></span>
+          {{ 'menu.report' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.report' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+      
+      <!-- config -->
+      <md-list-item class="sidebar-title"><span>{{ 'menu.config' | translate}}</span></md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.config" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-cogs"></span>
+          {{ 'menu.config' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.config' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listCity" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-map"></span>
+          {{ 'menu.city' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.city' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+      <md-list-item class="sidebar-list">
+        <a  ui-sref="app.listVoter" ui-sref-active="active" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+          <span class="menu-icon fa fa-id-badge"></span>
+          {{ 'menu.voter' | translate}}
+          <md-tooltip md-direction="right" ng-if="!toggle">
+            {{'menu.voter' | translate}}
+          </md-tooltip>
+        </a>
+      </md-list-item>
+    </md-list>
+  </div>
+  <!-- End Sidebar -->
+
+  <div id="content-wrapper">
+    <div class="page-content">
+
+      <!-- Header Bar -->
+      <div class="header" layout="row">
+        <div class="col-xs-12">
+          <div class="user pull-right mr-10">
+            <div class="item dropdown ml-20" uib-dropdown>
+              <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+                  {{ user.first_name }}
+                  <i class=""></i>
+                </a>
+              <md-list layout-padding class="dropdown-menu dropdown-menu-right animated flipInX">
+                <md-list-item class="dropdown-header">
+                  {{ user.first_name }}
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="link">
+                  <a ui-sref="app.profile" md-ink-ripple ng-mousedown="$event.stopPropagation()">
+                      {{ 'menu.profile' | translate}}
+                    </a>
+                </md-list-item>
+                <md-list-item class="link">
+                  <a href="http://blog.mailfinder.io/como-validar-lista-de-emails/" md-ink-ripple ng-mousedown="$event.stopPropagation()" target="_blank">
+                      {{ 'menu.help' | translate}}
+                    </a>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="link">
+                  <a href="#">
+                      Logout
+                    </a>
+                </md-list-item>
+              </md-list>
+            </div>
+            <div class="item dropdown" uib-dropdown>
+              <md-list layout-padding class="dropdown-menu dropdown-menu-right animated flipInX">
+                <md-list-item >
+                  
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item>
+                  <a ui-sref="app.financial">
+                    {{ 'menu.financial' | translate}}
+                  </a>
+                </md-list-item>
+              </md-list>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="page">
+              {{$root.page.title | translate}}
+            </div>
+            <div class="breadcrumb-links">
+              {{$root.page.subtitle | translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Bar -->
+
+      <!-- Main Content -->
+      <div ui-view id="main-content"></div>
+
+    </div>
+    <!-- End Page Content -->
+  </div>
+  <!-- End Content Wrapper -->
+</div>
+<!-- End Page Wrapper -->

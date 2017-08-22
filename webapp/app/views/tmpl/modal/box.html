@@ -1,0 +1,66 @@
+<!--
+* View de cadastro de uma nova urna
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+        <md-card class="w500" style="width: 500px;">
+		    <md-card-title>
+		      <md-card-title-text>
+		        <span class="md-headline">{{ 'box.placeholder.headline' | translate }}</span>
+		        <span class="md-subhead">{{ 'box.placeholder.subheadline' | translate }}</span>
+		      </md-card-title-text>
+		    </md-card-title>
+		    <md-card-content>
+		        <div layout="row" flex="100" style="margin-bottom: 36px;">
+			    	<div flex="100">
+				       	<md-autocomplete
+				          	md-selected-item="box.core"
+				          	md-items="item in cores"
+				          	md-item-text="item.name"
+				          	md-min-length="0"
+				          	placeholder="{{'box.placeholder.core.autocomplete' | translate}}">
+					        <md-item-template>
+					          <span md-highlight-text="item.id" md-highlight-flags="^i">{{item.name}}</span>
+					        </md-item-template>
+					        <md-not-found>
+					          {{'box.placeholder.core.autocomplete' | translate}}
+					        </md-not-found>
+				      </md-autocomplete>
+					</div>		      	
+		        </div>
+		        <div layout="row" flex="100" style="margin-bottom: 36px;">
+			    	<div flex="100">			    	
+				       	<md-autocomplete
+				          	md-selected-item="box.city"
+				          	md-items="item in citys"
+				          	md-item-text="item.name"
+				          	md-min-length="0"
+				          	placeholder="{{'box.placeholder.city.autocomplete' | translate}}">
+					        <md-item-template>
+					          <span md-highlight-text="item.id" md-highlight-flags="^i">{{item.name}}</span>
+					        </md-item-template>
+					        <md-not-found>
+					          {{'box.placeholder.city.autocomplete' | translate}}
+					        </md-not-found>
+				      </md-autocomplete>
+					</div>		      	
+		        </div>
+		        <div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'box.placeholder.locale' | translate }}</label>
+			          <input ng-model="box.locale">
+			        </md-input-container>
+		        </div>
+		      	<div layout="row">
+			    	<md-button flex="50" class="md-raised md-primary" ng-click="save()">
+			    		{{ 'other.save' | translate }}
+			    	</md-button>
+			    	<md-button flex="50" class="md-raised md-warn" ng-click="cancel()">
+			    		{{ 'other.cancel' | translate }}
+			    	</md-button>
+		      	</div>
+		    </md-card-content>
+
+		  </md-card>
