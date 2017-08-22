@@ -1,0 +1,93 @@
+.register-div{
+	.left-register{
+		color: $primaryFont;
+		h1,h2,h3,h4,h5,h6{
+			color: $primaryFont;
+		}
+		.img-pcs{
+			display: block;
+			margin: 0 auto;
+			max-width: 50%;
+		}
+		.logo-register{
+			padding:15px;
+			background-color: #292929;
+			.logo{
+				display:block;
+				margin: 0 auto;
+				max-height:130px;
+			}
+		}
+		.register-content{
+			background-color:#333;
+			padding:30px;
+			padding-top: 50px;
+			ul.benefits{
+				margin-bottom: 25px;
+				padding: 0 30px;
+				list-style: none;
+				li{
+					margin-top:20px;
+					h4{
+						color:$primary;
+						font-size:24px;
+						font-weight: bold;
+					}
+					h5{
+						color:$secondaryFont;
+						font-size:15px;
+					}
+					i{
+						color:$primary;
+						width: 70px;
+						font-size: 70px;
+						float:left;
+						margin-right:15px;
+					}
+
+				}
+			}
+		}
+	  background-color: rgba(90,141,189,1);
+	  background: filter-gradient(#5a8dbd, #05498d, horizontal);
+	  background: background-image(linear-gradient(left, rgba(90,141,189,1) 0%, rgba(5,73,141,1) 100%));
+    	box-shadow: 5px -2px 12px 0 $primaryShadow;
+		z-index:2;
+	}
+	.right-register{
+		h4{
+			color: $primary;
+			font-weight: bold;
+			font-size:24px;
+		}
+		p{
+			text-align:center;
+		}
+		padding:50px;
+		color:$secondaryFont;
+		background-color: $contentBackground;
+		z-index:1;
+		position:relative;
+		a{
+			font-size: 12px;
+		}
+	}
+
+	md-progress-linear{
+		height: 3px;
+		opacity: 0.9;
+		.md-container{
+			background-color: $primary;
+			height: 3px;
+			top:-24px;
+			.md-bar{
+				background-color: lighten($primary,25%);
+				height: 3px;
+			}
+		}
+	}
+	md-tabs-wrapper{
+		display:none;
+	}
+
+}

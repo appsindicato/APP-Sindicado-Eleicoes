@@ -1,0 +1,202 @@
+{
+  "configure":{
+    "get": {
+      "/" : "install",
+      "/database" : "database",
+      "/urna/{id:[0-9]+}" : "urna"
+    },
+    "post": {
+      "/date" : "electionDate"
+    }
+  },
+  "login":{
+    "get":{
+      "/":"get"
+    }
+  },
+  "user":{
+  	"post" : {
+  		"/" : "post"
+  	},
+  	"get": {
+      "/" : "get",
+  		"/{id:[0-9]+}" : "get",
+      "/count" : "count"
+  	},
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "election" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/{id:[0-9]+}" : "get"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "candidate_office" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/count" : "count"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "candidate" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/count" : "count"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "city" : {
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/count" : "count"
+    },
+    "post":{
+      "/import" : "import"
+    }
+  },
+  "core_zone" : {
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get"
+    },
+    "post":{
+      "/import" : "import"
+    }
+  },
+  "core" : {
+    "post" : {
+      "/" : "post",
+      "/import" : "import"
+    },
+    "get": {
+      "/" : "get",
+      "/count" : "count",
+      "/{id:[0-9]+}" : "get"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "plaque_type" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "plaque" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/count" : "count"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "plaque_candidate" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/count" : "count"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "box" : {
+    "post" : {
+      "/" : "post"
+    },
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/suspend/{id:[0-9]+}" : "suspend",
+      "/transit/{id:[0-9]+}" : "transit",
+      "/count" : "count"
+    },
+    "delete" :{
+      "/{id:[0-9]+}" : "delete"
+    },
+    "put":{
+      "/{id:[0-9]+}" : "put"
+    }
+  },
+  "voter" : {    
+    "get": {
+      "/" : "get",
+      "/{id:[0-9]+}" : "get",
+      "/count" : "count"
+    },
+    "post" : {
+      "/import" : "import"
+    }
+  },
+  "upload" : {    
+    "post" : {
+      "/file" : "post",
+      "/vote" : "vote"
+    }
+  },
+  "report" : {
+    "post" : {
+      "/" : "report",
+      "/adviser" : "adviser"
+    }
+  }
+}

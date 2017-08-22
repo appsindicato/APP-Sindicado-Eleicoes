@@ -1,0 +1,94 @@
+<!--
+* View de configuracoes
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div layout-padding>
+			<div flex="100" layout-padding layout-align="center center"  class="alert alert-danger" role="alert" ng-show="import.error">
+	  		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	  		{{ 'config.import.error.unknow' | translate }} :<a ng-href={{import.link}} target="_blank">{{ 'other.download' | translate }}</a>
+	  	</div>
+  	<md-content nt md-whiteframe="4">
+	  	<div flex="100" layout-padding layout-align="center center">
+	  		<center><h2>{{ 'config.import.title' | translate }}</h2></center>
+	  	</div>
+	  	<div layout="row">
+		  	<div flex="25" layout-padding>
+		  		<div 
+		  			ngf-drop="uploadFiles($file, 'core')" 
+		  			ngf-select="uploadFiles($file, 'core')" 
+		  			ngf-pattern="'*.csv'"
+		  			ngf-drag-over-class="'dragover'"
+		  			class="btn-primary btn-upload" 
+				  ngf-multiple="false">
+				  	<center>{{ 'config.import.core' | translate }}</center>
+				</div>
+				<div ngf-no-file-drop>
+					<center><center>{{ 'config.import.error.notsuported' | translate }}</center>
+				</div>
+		  	</div>
+		  	<div flex="25" layout-padding>
+		  		<div 
+			  		ngf-drop="uploadFiles($file, 'core_zone')" 
+			  		ngf-select="uploadFiles($file, 'core_zone')" 
+			  		class="btn-primary btn-upload"  
+				ngf-multiple="false">
+				  	<center>{{ 'config.import.core_zone' | translate }}</center>
+				</div>
+				<div ngf-no-file-drop>
+					<center>{{ 'config.import.error.notsuported' | translate }}</center>
+				</div>
+		  	</div>
+		  	<div flex="25" layout-padding>
+		  		<div 
+			  		ngf-drop="uploadFiles($file, 'city')" 
+			  		ngf-select="uploadFiles($file, 'city')" 
+			  		class="btn-primary btn-upload"  
+				ngf-multiple="false">
+				  	<center>{{ 'config.import.city' | translate }}</center>
+				</div>
+				<div ngf-no-file-drop>
+					<center>{{ 'config.import.error.notsuported' | translate }}</center>
+				</div>
+		  	</div>
+		  	<div flex="25" layout-padding>
+		  		<div 
+			  		ngf-drop="uploadFiles($file, 'voter')" 
+			  		ngf-select="uploadFiles($file, 'voter')" 
+			  		class="btn-primary btn-upload"  
+				ngf-multiple="false">
+				  	<center>{{ 'config.import.voter' | translate }}</center>
+				</div>
+				<div ngf-no-file-drop>
+					<center>{{ 'config.import.error.notsuported' | translate }}</center>
+				</div>
+		  	</div>
+	  	</div>
+  	</md-content>
+  	<md-content nt md-whiteframe="4">
+  		<form role="form">
+	  		<div flex="100" layout-padding layout="row" layout-align="center center">
+		  		<center><h2>{{ 'config.placeholder.election.title' | translate }}</h2></center>
+		  	</div>
+		  	<div layout="row">
+			  	<div flex="100" layout="row" layout-padding layout-align="center center">
+			  		 <md-input-container flex="100">
+	            		<label>{{ 'config.placeholder.begin_date' | translate }}</label>
+	            		<input type="text" ng-model="config.date1" mask="39/12/9999"/>
+	          		</md-input-container>
+			        <md-input-container flex="100">
+	            		<label>{{ 'config.placeholder.finish_date' | translate }}</label>
+	            		<input type="text" ng-model="config.date2" mask="39/12/9999"/>
+	          		</md-input-container>
+			  	</div>
+		  	</div>
+	  		<div layout="row" layout-align="center center">
+	  			<md-button type="submit" flex="50" class="md-raised md-primary"  ng-click="configSave()">
+		    		{{ 'config.placeholder.save' | translate }}
+		    	</md-button>
+	    	</div>
+	    </form>
+  	</md-content>
+</div>

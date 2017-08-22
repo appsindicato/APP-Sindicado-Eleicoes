@@ -1,0 +1,539 @@
+.main-app{
+  background: $background;
+  a:hover,a:focus,a:active{
+    border:none;
+    outline: none;
+  }
+}
+#content-wrapper {
+  background: $background;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+#main-content {
+  padding : 15px;
+}
+
+@media only screen and (min-width: 561px) {
+  #page-wrapper.open {
+    padding-left: 275px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #page-wrapper.open {
+    padding-left: 70px;
+  }
+}
+#page-wrapper.open #sidebar-wrapper {
+  left: 150px;
+}
+
+/**
+ * Hamburg Menu
+ * When the class of 'hamburg' is applied to the body tag of the document, 
+ * the sidebar changes it's style to attempt to mimic a menu on a phone app,
+ * where the content is overlaying the content, rather than push it.
+ */
+@media only screen and (max-width: 560px) {
+  body.hamburg #page-wrapper {
+    padding-left: 0;
+  }
+  body.hamburg #page-wrapper:not(.open) #sidebar-wrapper {
+    position: absolute;
+    left: -100px;
+  }
+  body.hamburg #page-wrapper:not(.open) md-list.sidebar .sidebar-title.separator {
+    display: none;
+  }
+  body.hamburg #page-wrapper.open #sidebar-wrapper {
+    position: fixed;
+  }
+  body.hamburg #page-wrapper.open #sidebar-wrapper md-list.sidebar md-list-item.sidebar-main {
+    margin-left: 0px;
+  }
+  body.hamburg #sidebar-wrapper md-list.sidebar md-list-item.sidebar-main,
+  body.hamburg .header .meta {
+    margin-left: 70px;
+  }
+  body.hamburg #sidebar-wrapper md-list.sidebar md-list-item.sidebar-main,
+  body.hamburg #page-wrapper.open #sidebar-wrapper md-list.sidebar md-list-item.sidebar-main {
+    transition: margin-left 0.4s ease 0s;
+  }
+}
+
+/**
+ * Header
+ */
+.header {
+  height: 60px;
+  background: $headerBackground;
+}
+.header > div:last-child {
+  padding-right: 0;
+}
+.header .meta .page {
+  font-size: 17px;
+  padding-top: 11px;
+}
+.header .meta .breadcrumb-links {
+  font-size: 10px;
+}
+.header .meta div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header .login a {
+  padding: 18px;
+  display: block;
+}
+.header .user {
+  min-width: 130px;
+}
+.header .user > .item {
+  min-width: 65px;
+  height: 60px;
+  float: right;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.header .user > .item a {
+  color: $primaryFont;
+  display: block;
+}
+.header .user > .item i {
+  font-size: 20px;
+  line-height: 55px;
+}
+.header .user > .item img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.header .user > .item md-list.dropdown-menu {
+  background-color: rgba(90,141,189,1);
+  background: filter-gradient(#5a8dbd, #05498d, horizontal);
+  background: background-image(linear-gradient(left, rgba(90,141,189,1) 0%, rgba(5,73,141,1) 100%));
+  color: $primaryFont;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  top: 37px;
+}
+.header .user > .item md-list.dropdown-menu .dropdown-header {
+  text-align: center;
+  color: $primaryFont;
+}
+.header .user > .item md-list.dropdown-menu md-list-item.link {
+  text-align: left;
+}
+.header .user > .item md-list.dropdown-menu md-list-item.link a {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.loading {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-regular-webfont.eot');
+  src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-regular-webfont.woff') format('woff'), url('../fonts/montserrat-regular-webfont.ttf') format('truetype'), url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular-webfont.svg') format('svg');
+  }
+  select {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+/* Base */
+html {
+  overflow-y: scroll;
+}
+body {
+  text-size-adjust: 100%;
+  background: $background;
+  font-family: 'Tahoma' ,sans-serif;
+  color: $primaryFont;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: 'Tahoma' ,sans-serif;
+  color: $hFont;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row > div {
+  margin-bottom: 15px;
+}
+.alerts-container .alert:last-child {
+  margin-bottom: 0;
+}
+#page-wrapper {
+  padding-left: 70px;
+  height: 100%;
+}
+#sidebar-wrapper {
+  margin-left: -150px;
+  left: -55px;
+  width: 275px;
+  position: fixed;
+  height: 100%;
+  z-index: 999;
+}
+#page-wrapper,
+#sidebar-wrapper {
+  transition: all .4s ease 0s;
+}
+.green {
+  background: #23ae89;
+}
+.blue {
+  background: #2361ae;
+}
+.orange {
+  background: #d3a938;
+}
+.red {
+  background: #ae2323;
+}
+.form-group .help-block.form-group-inline-message {
+  padding-top: 5px;
+}
+div.input-mask {
+  padding-top: 7px;
+}
+
+
+/* #592727 RED */
+/* #2f5927 GREEN */
+/* #30426a BLUE (default)*/
+/* Sidebar background color */
+/* Sidebar header and footer color */
+/* Sidebar title text colour */
+/* Sidebar menu item hover color */
+/**
+ * Sidebar
+ */
+#sidebar-wrapper {
+  background: $sideBarBackground;
+  background-color: rgba(90,141,189,1);
+  background: filter-gradient(#5a8dbd, #05498d, horizontal);
+  background: background-image(linear-gradient(left, rgba(90,141,189,1) 0%, rgba(5,73,141,1) 100%));
+}
+md-list.sidebar .sidebar-main a,
+.sidebar-footer,
+md-list.sidebar .sidebar-list a:hover,
+md-list.sidebar .sidebar-title.separator {
+  /* Sidebar header and footer color */
+  /*background: $contentBackground;*/
+}
+md-list.sidebar {
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.16), 0 1px 7px transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+md-list.sidebar md-list-item {
+  a {
+    color: $primaryFont;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 275px;
+    text-indent: 10px;
+    font-weight: 500;
+  }
+  span {
+    text-indent: 10px;
+  }
+}
+md-list.sidebar .sidebar-main {
+  height: 65px;
+}
+md-list.sidebar .sidebar-main a {
+  font-size: 13px;
+  line-height: 50px;
+  text-indent: 10px;
+}
+md-list.sidebar .sidebar-main a:hover {
+  cursor: pointer;
+}
+md-list.sidebar .sidebar-main .menu-icon {
+    font-size: 30px;
+    margin: -30px 0 0 7px;
+}
+md-list.sidebar .sidebar-title {
+  color: $primaryFont;
+  background: rgba(68,97,130,0.3);
+  font-size: 12px;
+  height: 35px;
+  line-height: 40px;
+  text-transform: uppercase;
+  transition: all .6s ease 0s;
+}
+md-list.sidebar .sidebar-list {
+  height: 40px;
+}
+md-list.sidebar .sidebar-list a {
+  font-size: 13px;
+  color: $primaryFont;
+  line-height: 40px;
+  height:100%;
+}
+md-list.sidebar .sidebar-list a:hover,md-list.sidebar .sidebar-list a.active {
+  color: $primaryFont;
+  border-left: 3px solid #e99d1a;
+  background-color: $success;
+}
+md-list.sidebar .sidebar-list .menu-icon {
+  line-height: 40px;
+  width: 60px;
+  font-size: 18px;
+}
+.sidebar-footer {
+  position: absolute;
+  height: 80px;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all .6s ease 0s;
+  text-align: center;
+}
+.sidebar-footer div a {
+  color: $primaryFont;
+  font-size: 12px;
+  line-height: 43px;
+}
+.sidebar-footer div a:hover {
+  color: $primaryFont;
+  text-decoration: none;
+}
+
+#page-wrapper:not(.open) {
+  md-list.sidebar {
+    bottom: 0;
+    .sidebar-title {
+      display: none;
+      height: 0px;
+      &.separator {
+        display: block;
+        height: 2px;
+        margin: 13px 0;
+      }
+    }
+    .sidebar-list {
+      a:hover span,a.active span{
+        border-left: 3px solid #e99d1a;
+      }
+      .menu-icon{
+        float: right;
+        font-size: 20px;
+        padding: 0 0 0 13px;
+        line-height: 40px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .sidebar-footer {
+    display: none;
+  }
+}
+
+md-list md-list-item,md-list-item.md-no-proxy, md-list-item .md-no-style  {
+  padding: 0;
+}
+
+.md-toolbar-tools{
+  background-color: $contentBackground;
+}
+md-content {
+  background-color: $contentBackground;
+  padding: 30px;
+  margin: 0 0 30px 0;
+  .content-header{
+    margin: 0 0 10px 0;
+    color: $secondaryFont;
+    font-weight: 100;
+  }
+}
+
+md-list-item, md-list-item .md-list-item-inner{
+  min-height: 40px;
+}
+
+/**Toolbards**/
+md-toolbar.header-toolbar{
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#page-wrapper:not(.open) .logo-closed{
+  display: block;
+  img {
+    width: 70px;
+    float: right;
+  }
+}
+
+#page-wrapper.open .logo-closed{
+  display: none;
+}
+
+/**
+ * responsive menu 
+ */
+@media only screen and (max-width: 560px) {
+  #page-wrapper{
+    padding-left: 0;
+    #content-wrapper{
+      padding-top: 60px;
+    }
+    #sidebar-wrapper{
+      height: 60px;
+      width:100%;
+      margin: 0;
+      left:0;
+      md-list{
+        width: 100%;
+        overflow: hidden;
+      }
+      .sidebar-main{
+        a{
+          margin: 0 auto;
+          width:100%;
+          text-align:center;
+          text-indent: 0;
+        }
+      }
+    }
+    .logo-closed{
+      display: none;
+    }
+    &.open{
+      padding-left: 0;
+      height: 0;
+      overflow: hidden;
+      #sidebar-wrapper{
+        left:0;
+        height: 100%;
+        .sidebar-footer{
+          display : block;
+        }
+        .sidebar-list {
+          .menu-icon{
+            float:right;
+            font-size: 20px;
+            padding:0 0 0 13px;
+            line-height: 45px;
+          }
+          a {
+            width:100%;
+          }
+        }
+        .sidebar-footer{
+          height: 40px;
+          .copyright{
+            display:none;
+          }
+        }
+      }
+      .logo-closed{
+        display: none;
+      }
+    }
+    &:not(.open) md-list.sidebar{
+
+    }
+
+  }
+}
+
+input{
+  color:$secondaryFont;
+}
+
+.text-muted{
+  color: $secondaryFont;
+}
+
+md-tooltip,.md-tooltip {
+  z-index:99999;
+  background: blue;
+}
+md-button, .md-button{
+  font-size:15px;
+  font-weight: bold;
+  height:50px;
+  text-transform: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}

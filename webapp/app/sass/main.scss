@@ -1,0 +1,33 @@
+/**
+* Arquivo de CSS principal
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+*/
+// import google fonts
+@import url(https://fonts.googleapis.com/css?family=Dosis:300,700|Ubuntu+Mono|Lato:300,400,700,300italic,400italic&subset=latin,latin-ext);
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,400,500,700');
+//Main Colors
+@import "shared/colors";
+
+// Shared
+@import "shared/layout";
+@import "shared/spacing";
+@import "shared/forms";
+@import "shared/modal";
+@import "shared/loading_content";
+@import "shared/toast";
+@import "shared/content";
+@import "shared/input";
+
+
+// Components
+@import "components/login";
+@import "components/register";
+@import "components/sidebar";
+@import "components/tables";
+@import "components/header";
+@import "components/button";
+@import "components/datepicker";
+@import "components/uploadbutton";

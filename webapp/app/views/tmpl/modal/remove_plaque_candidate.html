@@ -1,0 +1,30 @@
+<!--
+* View de remocao de candidatos da chapa
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div layout-padding>
+  <md-content md-whiteframe="2">
+      <div class="md-list-item-text" layout="row" layout-xs="column" layout-padding flex>
+        <div flex="5" class="text-center">{{ 'politician.table.id'  | translate }}</div>
+        <div flex class="text-center">{{ 'politician.table.first_name' | translate }}</div>
+        <div flex class="text-center">{{ 'politician.table.last_name' | translate }}</div>
+        <div flex class="text-center">{{ 'user.table.action' | translate }}</div>        
+      </div>
+    <md-list>
+      <md-list-item ng-repeat="item in data">
+        <div class="md-list-item-text" layout="row" layout-xs="column" layout-padding flex>
+        <div flex="5" class="text-center">{{ item.Candidate.id }}</div>
+        <div flex class="text-center">{{ item.Candidate.first_name }}</div>
+        <div flex class="text-center">{{ item.Candidate.last_name }}</div>
+        <div flex class="text-center">
+          <button class="btn btn-danger" ng-click="delete(item.id)">{{ 'other.delete' | translate }}</button>
+        </div>
+        </div>
+      <md-divider ng-show="!$last"></md-divider>  
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

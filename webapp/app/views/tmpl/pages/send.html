@@ -1,0 +1,76 @@
+<!--
+* View de importacao de arquivos
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div flex="100" layout-padding layout-align="center center" ng-show="import.error.message" class="alert alert-danger" role="alert">
+	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	{{import.error.message}}
+</div>
+<div layout-padding layout="row" layout-align="center center">
+  	<md-content layout-align="center center" md-whiteframe="4" flex="50">
+	  	<div flex="100" layout-padding layout-align="center center">
+	  		<center><h2>{{ 'send.placeholder.title' | translate }}</h2></center>
+	  	</div>
+  		<div layout="row">
+        	<md-input-container flex="100">
+	          <label>{{ 'send.placeholder.password' | translate }}</label>
+	          <input type="password" ng-model="import.password">
+	        </md-input-container>
+        </div>
+        <div layout="row">
+	        <md-input-container flex="100">
+	          <label>{{ 'send.placeholder.password' | translate }}</label>
+	          <input type="password" ng-model="import.password1">
+	        </md-input-container>
+        </div>
+	  	<div layout="row" layout-align="center center">
+		  	<div flex="100">
+		  		<div 
+		  			ngf-drop="uploadFiles($file, 1)" 
+		  			ngf-select="uploadFiles($file, 1)" 
+		  			ngf-drag-over-class="'dragover'"
+		  			class="button btn-primary btn-upload"
+		  			ng-disabled="import.disabled" 
+				  ngf-multiple="false">
+				  	<center> 
+				  		<span ng-show="!import.file_1.name">{{ 'send.placeholder.import.file_1' | translate }}</span>
+				  		<span ng-show="import.file_1.name">{{import.file_1.name}}</span>
+				  	</center>
+				</div>
+				<div ngf-no-file-drop>
+					<center><center>{{ 'send.placeholder.import.error.notsuported' | translate }}</center>
+				</div>
+		  	</div>
+	  	</div>
+	  	<div layout="row" layout-align="center center">
+		  	<div flex="100">
+		  		<div 
+		  			ngf-drop="uploadFiles($file, 2)" 
+		  			ngf-select="uploadFiles($file, 2)" 
+		  			ngf-drag-over-class="'dragover'"
+		  			class="button btn-primary btn-upload"
+		  			ng-disabled="import.disabled" 
+				  ngf-multiple="false">
+				  	<center> 
+				  		<span ng-show="!import.file_2.name">{{ 'send.placeholder.import.file_2' | translate }}</span>
+				  		<span ng-show="import.file_2.name">{{import.file_2.name}}</span>
+				  	</center>
+				</div>
+				<div ngf-no-file-drop>
+					<center><center>{{ 'send.placeholder.import.error.notsuported' | translate }}</center>
+				</div>
+		  	</div>
+	  	</div>
+	  	<div layout="row" layout-align="center center">
+	    	<md-button flex="25" class="md-raised md-primary" ng-click="save()">
+	    		{{ 'other.save' | translate }}
+	    	</md-button>
+	    	<md-button flex="25" class="md-raised md-warn" ng-click="cancel()">
+	    		{{ 'other.cancel' | translate }}
+	    	</md-button>
+      	</div>
+  	</md-content>
+</div>

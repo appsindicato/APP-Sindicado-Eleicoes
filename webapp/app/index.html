@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>URNA APP</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.css" />
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.css" />
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons-wind.css" />
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons-wind.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/morris.js/morris.css" />
+    <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.css" />
+    <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/angular-busy/dist/angular-busy.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//assets.moip.com.br/v2/moip.min.js"></script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-fontawesome/dist/angular-fontawesome.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-input-masks/angular-input-masks-standalone.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="bower_components/ngMask/dist/ngMask.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/eve-raphael/eve.js"></script>
+    <script src="bower_components/raphael/raphael.min.js"></script>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script src="bower_components/morris.js/morris.js"></script>
+    <script src="bower_components/angular-morris/build/module/angular-morris/angular-morris.min.js"></script>
+    <script src="bower_components/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="bower_components/ngSweetAlert2/SweetAlert2.js"></script>
+    <script src="bower_components/angular-highlightjs/build/angular-highlightjs.js"></script>
+    <script src="bower_components/slimScroll/jquery.slimscroll.js"></script>
+    <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="bower_components/angular-slimscroll/angular-slimscroll.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/angular-socialshare/dist/angular-socialshare.min.js"></script>
+    <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="bower_components/svg-morpheus/compile/minified/svg-morpheus.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/angular-busy/dist/angular-busy.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/template_cache.js"></script>
+    <script src="scripts/app.js"></script>
+    <!--controllers-->
+    <!-- AppSindicato -->
+
+    <script src="/node_modules/angular-bootstrap-datetimepicker/index.js"></script>
+
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/recovery.js"></script>
+    <script src="scripts/controllers/recoveryChangePassword.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+
+    <script src="scripts/controllers/user.js"></script>
+    <script src="scripts/controllers/box.js"></script>
+    <script src="scripts/controllers/report.js"></script>
+    <script src="scripts/controllers/config.js"></script>
+    <script src="scripts/controllers/plaque.js"></script>
+    <script src="scripts/controllers/politician.js"></script>
+    <script src="scripts/controllers/core.js"></script>
+    <script src="scripts/controllers/city.js"></script>
+    <script src="scripts/controllers/voter.js"></script>
+    
+    <!-- /AppSindicato -->
+    <script src="scripts/controllers/main.js"></script>
+    <!--/controllers-->
+    <!--directives-->
+    <script src="scripts/directives/header/header.js"></script>
+    <script src="scripts/directives/verified/verified.js"></script>
+    <script src="scripts/directives/equals.js"></script>
+    <script src="scripts/directives/ng-clipboard.js"></script>
+    <script src="scripts/directives/loading-button.js"></script>
+    <script src="scripts/directives/loading-content.js"></script>
+    <script src="scripts/directives/between-values.js"></script>
+    <script src="scripts/directives/payment-modal.js"></script>
+    <!--/directives-->
+    <!--resources-->
+    <!-- AppSindicato - Urna -->            
+    <script src="scripts/resources/authentication.js"></script>
+    <script src="scripts/resources/urlQueryNotation.js"></script>
+    <script src="scripts/resources/dashboard.js"></script>
+    <script src="scripts/resources/colors.js"></script>
+    <script src="scripts/resources/toast.js"></script>
+    
+    
+    <script src="scripts/resources/user.js"></script>
+    <script src="scripts/resources/plaque.js"></script>
+    <script src="scripts/resources/plaqueType.js"></script>
+    <script src="scripts/resources/plaqueCandidate.js"></script>
+    <script src="scripts/resources/city.js"></script>
+    <script src="scripts/resources/core.js"></script>
+    <script src="scripts/resources/politician.js"></script>
+    <script src="scripts/resources/politicianOffice.js"></script>
+    <script src="scripts/resources/box.js"></script>
+    <script src="scripts/resources/school.js"></script>
+    <script src="scripts/resources/import.js"></script>
+    <script src="scripts/resources/voter.js"></script>
+    <script src="scripts/resources/config.js"></script>
+    <script src="scripts/resources/smartTableFactory.js"></script>
+
+    <!-- /AppSindicato - Urna -->
+    <!--/resources-->
+    <!-- endbuild -->
+    <!-- Custom Fonts -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    </head>
+    <body>
+
+    <div class="main-app" ng-app="app" layout-fill>
+        <div class="main-app" layout-fill ui-view></div>
+    </div>
+    </body>
+
+</html>

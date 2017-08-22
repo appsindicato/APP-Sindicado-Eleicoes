@@ -1,0 +1,50 @@
+$contentBackground : #FFFFFF;
+$background : #E5E7F3;
+
+$success : #00ca95;
+$primary : #48A9E0;
+$danger : #D24636;
+$warn : #fcec71;
+$info : #31AFF5;
+
+/** FONT **/
+$primaryFont : #FFF;
+$secondaryFont : #999;
+$hFont : #999;
+$dividerColor: #999;
+
+/** Color Variations **/    
+$blue : #5e6db3;
+
+
+/**Layout Colors **/
+$sideBarBackground : #1D2242;
+$headerBackground : #5A8DBD;
+
+/**Input**/
+$inputBackground : $contentBackground;
+$inputBorder : $dividerColor;
+$inputText : $secondaryFont;
+$inputFocusBorder : $primary;
+$inputLabel : $secondaryFont;
+
+/**Modal**/
+$modalBackground : $contentBackground;
+
+/**Loading**/
+$loadingBackground : $primaryFont;
+$loadingIcon : $primaryFont;
+
+
+/**Shadow**/
+$primaryShadow : #999;
+
+/**Buttons**/
+.md-button.md-default-theme.md-hue-2.md-accent.md-fab, .md-button.md-hue-2.md-accent.md-fab, .md-button.md-default-theme.md-hue-2.md-accent.md-raised, .md-button.md-hue-2.md-accent.md-raised{
+	background: $primary;
+	color:$primaryFont;
+}
+
+.w500{
+	width: 500px;
+}

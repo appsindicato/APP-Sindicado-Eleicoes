@@ -1,0 +1,83 @@
+<div>
+  <md-toolbar class="md-theme-light">
+    <h1 class="md-toolbar-tools">
+      {{'verify.simple_title' | translate}}
+      <span flex></span>
+      <ng-md-icon icon="close" ng-click="$mdSidenav('right').close()"></ng-md-icon>
+    </h1>
+  </md-toolbar> 
+  <div class="sidebar-subheader" layout ng-if="!doButton.valid">
+    <span flex="80" >{{'verify.do_campaign' | translate}}</span>
+    <span flex="20" class="text-right">
+      <i class="fa fa-cog fa-spin"></i>
+    </span>
+  </div>
+  <div class="sidebar-subheader" layout ng-if="doButton.valid">
+    <span flex="80" >{{'verify.success' | translate}}</span>
+    <span flex="20" class="text-right">
+      <i class="fa fa-check-circle"></i>
+    </span>
+  </div>
+  <md-content>
+    <div layout="row" layout-wrap ng-if="doButton.valid">
+      <div flex="100">
+        <h5><ng-md-icon icon="email" ></ng-md-icon> {{verified.email}}</h5>
+      </div>
+      <div flex="100" class="text-center">
+          <div class="verify-result verify-result-success" ng-if="verified.score>=0.75">
+            <ng-md-icon icon="check" size="100" ></ng-md-icon> 
+          </div>
+          <div class="verify-result verify-result-info" ng-if="verified.score>=0.6 && verified.score<0.75">
+            <ng-md-icon icon="check" size="100" ></ng-md-icon> 
+          </div>
+          <div class="verify-result verify-result-warn" ng-if="verified.score>=0.4 && verified.score<0.6">
+            <ng-md-icon icon="warning" size="100" ></ng-md-icon> 
+          </div>
+          <div class="verify-result verify-result-danger" ng-if="verified.score<0.4">
+            <ng-md-icon icon="close" size="100" ></ng-md-icon> 
+          </div>
+          <h5 class="text-center mb-10" ng-class="{'text-success':(verified.score>=0.75),'text-info':(verified.score>=0.6&&verified.score<0.75),'text-warn':(verified.score>=0.4 &&verified.score<0.6),'text-danger':(verified.score<0.4)}">{{verified.message}}</h5>
+      </div>
+      <ul flex="100" class="result-list" ng-if="!response.invalid_response">
+        <li>{{'verify.result' | translate}} <span class="badge" ng-class="[{'badge-success':original.result},{'badge-danger':!original.result}]">{{verified.result}}</span></li>
+        <li>{{'verify.mx_found' | translate}} <span class="badge" ng-class="[{'badge-success':original.mx_found},{'badge-danger':!original.mx_found}]">{{verified.mx_found}}</span></li>
+        <li>{{'verify.smtp_check' | translate}} <span class="badge" ng-class="[{'badge-success':original.smtp_check},{'badge-danger':!original.smtp_check}]">{{verified.smtp_check}}</span></li>
+        <li>{{'verify.free' | translate}} <span class="badge" ng-class="[{'badge-success':original.free},{'badge-danger':!original.free}]">{{verified.free}}</span></li>
+        <li class="list-divider"></li>
+        <li>{{'verify.catch_all' | translate}} <span class="badge" ng-class="[{'badge-success':original.catch_all},{'badge-danger':!original.catch_all}]">{{verified.catch_all}}</span></li>
+        <li>{{'verify.role' | translate}} <span class="badge" ng-class="[{'badge-success':original.role},{'badge-danger':!original.role}]">{{verified.role}}</span></li>
+        <li>{{'verify.disposable' | translate}} <span class="badge" ng-class="[{'badge-success':original.disposable},{'badge-danger':!original.disposable}]">{{verified.disposable}}</span></li>
+        <li>{{'verify.greylist' | translate}} <span class="badge" ng-class="[{'badge-success':original.greylist},{'badge-danger':!original.greylist}]">{{verified.greylist}}</span></li>
+        <li class="list-divider"></li>
+        <li>{{'verify.score' | translate}} <span class="badge " ng-class="{'badge-success':(verified.score>=0.75),'badge-info':(verified.score>=0.6&&verified.score<0.75),'badge-warn':(verified.score>=0.4 &&verified.score<0.6),'badge-danger':(verified.score<0.4)}">{{verified.score*100 | number: fractionSize}}%</span></li>
+      </ul>
+      <ul flex="100" class="result-list" ng-if="response.invalid_response">
+        <li>{{'verify.result' | translate}} <span class="badge" ng-class="[{'badge-success':original.result},{'badge-danger':!original.result}]">{{verified.result}}</span></li>
+        <li class="list-divider"></li>
+        <li>{{'verify.score' | translate}} <span class="badge " ng-class="{'badge-success':(verified.score>=0.75),'badge-info':(verified.score>=0.6&&verified.score<0.75),'badge-warn':(verified.score>=0.4 &&verified.score<0.6),'badge-danger':(verified.score<0.4)}">{{verified.score*100 | number: fractionSize}}%</span></li>
+      </ul>
+      <div flex="100" flex-xs="100" flex-sm="100" layout="column" layout-align="center center" ng-if="response.invalid_response">
+        <p>{{verified.description}}</p>
+      </div>
+    </div>
+    <div layout="row" layout-wrap ng-if="!doButton.valid">
+      <div flex="100">
+        <h5><ng-md-icon icon="email"></ng-md-icon> {{v.email}}</h5>
+      </div>
+      <div flex="100">
+        <img src="images/relax.jpg" class="img-responsive">
+      </div>
+      <div flex="100" layout layout-align="center center" class="mt-10">
+       <md-progress-circular 
+        md-mode="indeterminate"  
+        md-diameter="100%">
+        </md-progress-circular>
+      </div>
+      <div flex="100">
+        <p>
+          {{'verify.loading_verified' | translate }}
+        </p>
+      </div>
+    </div>
+  </md-content>
+</div>

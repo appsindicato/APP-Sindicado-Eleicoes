@@ -1,0 +1,59 @@
+<!--
+* View de login
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div layout="row" layout-align="center center" class="login-div" ng-cloak layout-wrap layout-fill>
+     <div class="login-box" flex-sm="70" flex-md="50" flex-gt-md="40" flex-xs="100" >
+            <md-content class="mb-0 text-center;" flex="100">
+                <div flex="100" class="text-center logo-login">
+                    <img src="images/padrao.png" height="150px" />
+                </div>
+                <div class="login-content">
+                  <h4>
+                    {{'login.title'|translate}}
+                  </h4>
+                  <p>
+                    {{'login.subtitle'|translate}}
+                  </p>
+                  <div class="alert alert-success" role="alert" ng-if="newUser">
+                    {{'signup.success'|translate}}
+                  </div>
+                  <form role="form" layout="column" layout-padding>
+                      <md-tabs md-dynamic-height md-selected="selectedIndex">
+                        <md-tab>
+                          <md-tab-body>
+                            <md-input-container class="md-icon-float md-block mt-50" flex="100">
+                              <label>{{'login.placeholder.email' | translate}}</label>
+                              <input id="email" name="email" type="email" autofocus ng-model="user.email" required>
+                            </md-input-container>
+                          </md-tab-body>
+                        </md-tab>
+                        <md-tab>
+                          <md-tab-body>
+                            {{"login.placeholder.email" | translate}}: {{user.email}} <a class="bold" ng-click="selectedIndex=0">{{'login.not_you' | translate}}</a>
+                            <md-input-container class="md-icon-float md-block mt-50" flex="100">
+                              <label>{{'login.placeholder.password' | translate}}</label>
+                              <input  id="password" name="password" type="password" ng-model="user.password" required>
+                              <md-progress-linear md-mode="indeterminate" ng-if="loading"></md-progress-linear>
+                            </md-input-container>
+                          </md-tab-body>
+                        </md-tab>
+                      </md-tabs>
+                      <div flex="100" layout="row" layout-sm="column" layout-align="center">
+                          <md-button type="submit" loading-button="loading" ng-click="valid()" class="md-raised md-accent md-hue-2" flex="100" flex-gt-xs="70">
+                              {{'login.login-button' | translate }}
+                          </md-button>
+                      </div>
+                      <div layout="row" layout-sm="column" layout-align="center" layout-padding layout-wrap>
+                          <div class="md-block pb-10 text-center" ng-if="selectedIndex==1" flex="100">
+                              <a class="recovery" ui-sref="recovery">{{'login.recovery_button' | translate }}</a>
+                          </div>
+                      </div>
+                  </form>
+                </div>
+            </md-content>
+    </div>
+</div>

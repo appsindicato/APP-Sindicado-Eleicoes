@@ -1,0 +1,9 @@
+#toast-container{
+    background: transparent;
+    width: 300px;
+    &.toast-top-center{
+        top: 0;
+    	right: calc(50% - 150px);
+
+    }
+}

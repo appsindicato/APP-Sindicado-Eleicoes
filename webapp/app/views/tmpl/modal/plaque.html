@@ -1,0 +1,49 @@
+<!--
+* View de cadastro de uma nova chapa
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+         <md-card>
+		    <md-card-title>
+		      <md-card-title-text>
+		        <span class="md-headline">{{ 'plaque.placeholder.headline' | translate }}</span>
+		        <span class="md-subhead">{{ 'plaque.placeholder.subheadline' | translate }}</span>
+		      </md-card-title-text>
+		    </md-card-title>
+
+		    <md-card-content>
+		      	<div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'plaque.placeholder.name' | translate }}</label>
+			          <input ng-model="plaque.name">
+			        </md-input-container>
+		        </div>
+		      	<div layout="row" flex="100">
+			        <md-input-container flex="100">
+			          <label>{{ 'plaque.placeholder.number' | translate }}</label>
+			          <input ng-model="plaque.number">
+			        </md-input-container>
+		        </div>
+		        <div layout="row">
+			    	<div flex="50">
+			    		{{ 'plaque.placeholder.type_id' | translate }}
+			    	</div>
+			    	<div flex="50">
+				        <md-radio-group ng-model="plaque.plaque_type_id">
+					      <md-radio-button ng-repeat="p in plaqueType" ng-value="p.id">{{p.name}}</md-radio-button>
+					    </md-radio-group>
+					</div>
+		      	</div>
+		      	<div layout="row">
+			    	<md-button flex="50" class="md-raised md-primary" ng-click="save()">
+			    		{{ 'other.save' | translate }}
+			    	</md-button>
+			    	<md-button flex="50" class="md-raised md-warn" ng-click="cancel()">
+			    		{{ 'other.cancel' | translate }}
+			    	</md-button>
+		      	</div>
+		    </md-card-content>
+
+		  </md-card>

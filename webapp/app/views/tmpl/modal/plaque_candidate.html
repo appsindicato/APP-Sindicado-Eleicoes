@@ -1,0 +1,44 @@
+<!--
+* View de cadastro de ligacao entre chapa e candidato
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+         <md-card class="w500" style="width: 500px;">
+		    <md-card-title>
+		      <md-card-title-text>
+		        <span class="md-headline">{{ 'plaque_candidate.placeholder.headline' | translate }}</span>
+		        <span class="md-subhead">{{ 'plaque_candidate.placeholder.subheadline' | translate }}</span>
+		      </md-card-title-text>
+		    </md-card-title>
+
+		    <md-card-content>
+		        <div layout="row">
+			    	<div flex="100">			    	
+				       <md-autocomplete
+				          md-selected-item="plaque_candidate.candidate"
+				          md-items="item in candidates"
+				          md-item-text="item.first_name + ' ' + item.last_name"
+				          md-min-length="0"
+				          placeholder="{{'plaque_candidate.placeholder.autocomplete' | translate}}">
+				        <md-item-template>
+				          <span md-highlight-text="item.document" md-highlight-flags="^i">{{item.first_name}} {{item.last_name}}</span>
+				        </md-item-template>
+				        <md-not-found>
+				          {{'plaque_candidate.placeholder.notfound' | translate}}
+				        </md-not-found>
+				      </md-autocomplete>
+					</div>
+		      	</div>
+		      	<div layout="row">
+			    	<md-button flex="50" class="md-raised md-primary" ng-click="save()">
+			    		{{ 'other.save' | translate }}
+			    	</md-button>
+			    	<md-button flex="50" class="md-raised md-warn" ng-click="cancel()">
+			    		{{ 'other.cancel' | translate }}
+			    	</md-button>
+		      	</div>
+		    </md-card-content>
+
+		  </md-card>

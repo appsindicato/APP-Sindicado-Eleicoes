@@ -1,0 +1,149 @@
+<!--
+* View Dashboard
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div class="height-hotfix-1">
+      <div ng-clock flex="100" layout-gt-sm="row" layout-xs="column" layout-sm="column" layout-align="center top" layout-padding ng-show="dashboard.pie.total > 0" layout-wrap>
+        <div flex flex-xs="100" flex-sm="100" layout="column">
+          <div flex layout="column">
+            <md-content class="height-100" layout-padding>
+              <md-toolbar class="animated fadeIn p-0">
+                <div class="md-toolbar-tools">
+                  <h2 class="md-flex">{{ 'dashboard.chart_1' | translate }}</h2>
+                </div>
+              </md-toolbar>
+              <canvas 
+                id="pie" 
+                class="chart chart-pie"
+                chart-data="chart1" 
+                chart-colors="colors1" 
+                chart-options="chartOptions"
+                chart-labels="labels1">
+              </canvas> 
+            </md-content>
+          </div>
+        </div>
+        <div flex flex-xs="100" flex-sm="100" layout="column">
+          <div flex layout="column">
+            <md-content class="height-100" layout-padding>
+                <md-toolbar class="animated fadeIn p-0">
+                  <div class="md-toolbar-tools">
+                    <h2 class="md-flex">{{ 'dashboard.chart_3' | translate }}</h2>
+                  </div>
+                </md-toolbar>
+                <canvas 
+                  id="line" 
+                  class="chart chart-line" chart-data="chart3"
+                  chart-labels="labels3" 
+                  chart-colors="colors3" 
+                  chart-options="chartOptions"
+                  chart-series="series3">
+                </canvas> 
+            </md-content>
+          </div>
+        </div>
+        <div flex flex-xs="100" flex-sm="100" layout="column">
+          <div flex layout="column">
+            <md-content class="height-100" layout-padding>
+              <md-toolbar class="animated fadeIn p-0">
+                <div class="md-toolbar-tools">
+                  <h2 class="md-flex">{{ 'dashboard.chart_2' | translate }}</h2>
+                </div>
+              </md-toolbar>
+             <canvas 
+              id="pie2" 
+              class="chart chart-bar"
+              chart-colors="colors2" 
+              chart-data="chart2" 
+              chart-labels="labels2">
+              </canvas> 
+            </md-content>
+          </div>
+        </div>
+        <div flex="100" flex-xs="100" flex-sm="100" layout="column">
+          <div  flex="100" layout="column">
+            <md-content class="height-100 text-center" layout="row" layout-wrap layout-align="center center" layout-padding >
+              <md-toolbar class="animated fadeIn p-0">
+                <div class="md-toolbar-tools">
+                  <h2 class="md-flex">{{ 'dashboard.number' | translate }}</h2>
+                </div>
+              </md-toolbar>
+              <h5 flex flex-sm="33" flex-xs="100" ng-class="mailfindexClass"> 
+                <md-tooltip>
+                  {{'tooltips.mailfindex' | translate}}
+                </md-tooltip> 
+                    {{ 'verify.score' | translate }}<br>
+                    {{dashboard.pie.score*100 | number: fractionSize}}%
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="role"> 
+                <md-tooltip>
+                  {{'tooltips.role' | translate}}
+                </md-tooltip> 
+                {{'verify.role' | translate}}
+                <br/> 
+                {{dashboard.pie.role * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="free">
+                <md-tooltip>
+                  {{'tooltips.free' | translate}}
+                </md-tooltip> 
+              {{'verify.free' | translate}}
+              <br/>
+               {{dashboard.pie.free * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="disposable">
+                <md-tooltip>
+                  {{'tooltips.disposable' | translate}}
+                </md-tooltip> 
+                {{'verify.disposable' | translate}}
+                <br/>
+               {{dashboard.pie.disposable * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+               <h5  flex flex-sm="33" flex-xs="50" ng-class="mailfindexClass">
+               <md-tooltip>
+                  {{'tooltips.total' | translate}}
+                </md-tooltip> 
+              {{'dashboard.total' | translate}}
+              <br/>
+               {{dashboard.pie.total}}  
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="send">
+                <md-tooltip>
+                  {{'tooltips.send' | translate}}
+                </md-tooltip> 
+                {{'verify.sends' | translate}}
+                <br/>
+                {{dashboard.pie.send * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="risky">
+                <md-tooltip>
+                  {{'tooltips.risky' | translate}}
+                </md-tooltip> 
+                {{'verify.risky' | translate}}
+                <br/>
+                {{dashboard.pie.risky * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="suspicious">
+                <md-tooltip>
+                  {{'tooltips.suspicious' | translate}}
+                </md-tooltip> 
+                {{'verify.suspicious' | translate}}
+                <br/>
+                {{dashboard.pie.suspicious * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+              <h5  flex flex-sm="33" flex-xs="50" class="unavailable"> 
+                <md-tooltip>
+                  {{'tooltips.unavailable' | translate}}
+                </md-tooltip> 
+                {{'verify.unavailable' | translate}}
+                <br/>
+                {{dashboard.pie.unavailable * 100 / dashboard.pie.total | number: fractionSize }} %
+              </h5>
+            </md-content>
+          </div>
+        </div>
+      </div>
+</div>
