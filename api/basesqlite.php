@@ -5,10 +5,9 @@ function sqlite_escape_string( $string ){
 }
 
 require('plugins/FilePlugin.php');
-// require('/var/www/html/api/plugins/FilePlugin.php');
 
 echo "Conectando no servidor mysql...\n";
-$readConnection = new PDO('1','2,','3');
+$readConnection = new PDO('1','2','3');
 
 echo "Conectando no sqlite...\n";
 $writeConnection = new PDO('sqlite:baseUrna.sqlite');

@@ -35,7 +35,7 @@ var app = angular
     'smart-table'
   ])
   //URl da API
-  .value('urlApi','http://localhost/repo_app_git/api/')
+  .value('urlApi','http://localhost/urna/sistema/api/')
   .factory('httpRequestInterceptor', function ($q, $location) {
       return {
           'responseError': function(rejection) {

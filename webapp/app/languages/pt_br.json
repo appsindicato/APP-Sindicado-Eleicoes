@@ -49,6 +49,10 @@
         "voter": {
             "title":"Eleitores",
             "subtitle":"Home / Eleitores"
+        },
+        "report": {
+            "title":"Relatórios",
+            "subtitle":"Home / Relatórios"
         }
     },
     "validation" : {
@@ -269,6 +273,20 @@
             "subheadline": "Preencha os campos",
             "office" : "Cargo",
             "document": "RG"
+        }
+    },
+    "report": {
+        "title" : "Relatórios",
+        "plaque": "Emitir Relatório de Chapa",
+        "rep" : "Emitir Relatório de Representante Fiscal",
+        "placeholder" : {
+            "core": "Núcleo",
+            "city" : "Cidade",
+            "all_cores" : "Todos os núcleos",
+            "select_city":"Selecione uma cidade"
+        },
+        "error":{
+            "city":"Selecione uma cidade"
         }
     },
      "config": {
