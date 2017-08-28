@@ -1,0 +1,42 @@
+<!--
+* View de configuracoes
+* @copyright GPL Version 3 © 2017 
+* @author APP - Sindicato <contato@app.com.br>
+* @license GPL Version 3
+* 
+-->
+<div layout-padding>
+  	<md-content nt md-whiteframe="4">
+	  	<div flex="100" layout-padding layout-align="center center">
+	  		<center><h2>{{ 'report.title' | translate }}</h2></center>
+	  	</div>
+	  	<div layout="row">
+		  	<div flex="50" layout-padding>
+		  		<form name="formplaque" ng-submit="submitPlaque()" method="post" target="_NEW">
+			        <div  class="text-center">
+			          <select class="form-control" id="core_id" name="core_id" ng-model="core">
+			            <option value="">{{ 'report.placeholder.all_cores' | translate}}</option>
+			            <option value="{{c.id}}" ng-repeat="c in cores">{{c.name}}</option>
+			          </select>
+				  		<button type="submit" class="btn btn-primary btn-upload mt-10">
+						  	{{ 'report.plaque' | translate }}
+						</button>
+			        </div>
+				</form>
+		  	</div>
+		  	<div flex="50" layout-padding>
+		  		<form name="formrep" ng-submit="submitRep()" method="post" target="_NEW">
+			        <div class="text-center">
+			          <select class="form-control" id="city_id" name="city_id" ng-model="city">
+			            <option value="">{{ 'report.placeholder.select_city' | translate}}</option>
+			            <option value="{{c.id}}" ng-repeat="c in citys">{{c.name}}</option>
+			          </select>
+				  		<button type="submit" class="btn btn-primary btn-upload mt-10">
+						  	{{ 'report.rep' | translate }}
+						</button>
+			        </div>
+			    </form>
+		  	</div>
+	  	</div>
+  	</md-content>
+</div>
