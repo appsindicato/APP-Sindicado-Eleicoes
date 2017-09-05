@@ -16,7 +16,7 @@ class Core extends ModelBase
      * Handle nested results
      */
     public static $relations = [
-        'city' => 'city_id'
+        'City' => 'city_id'
     ];
     /**
      * Clear cache for related models
