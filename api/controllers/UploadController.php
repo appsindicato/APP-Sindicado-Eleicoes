@@ -222,7 +222,7 @@ class UploadController extends \Phalcon\Mvc\Controller
 		        foreach($pdf_data as $key => $value){
 		        	if($key > 0){
 		        		$p = Plaque::findFirst($key);
-		        		$pdf[] = [$box->id, $proc_date, PlaqueType::findFirst($p->plaque_type_id)->name, $p->name, $value];
+		        		$pdf[] = [$box->id, $proc_date, PlaqueType::findFirst($p->plaque_type_id)->number, $p->name, $value];
 		        	}
 		        }
 
